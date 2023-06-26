@@ -1,4 +1,4 @@
-# Notifications
+# Prepair
 
 To start your Phoenix server:
 

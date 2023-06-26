@@ -1,5 +1,5 @@
-defmodule NotificationsWeb.PageControllerTest do
-  use NotificationsWeb.ConnCase
+defmodule PrepairWeb.PageControllerTest do
+  use PrepairWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

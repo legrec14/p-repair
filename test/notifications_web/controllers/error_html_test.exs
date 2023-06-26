@@ -1,14 +1,14 @@
-defmodule NotificationsWeb.ErrorHTMLTest do
-  use NotificationsWeb.ConnCase, async: true
+defmodule PrepairWeb.ErrorHTMLTest do
+  use PrepairWeb.ConnCase, async: true
 
   # Bring render_to_string/4 for testing custom views
   import Phoenix.Template
 
   test "renders 404.html" do
-    assert render_to_string(NotificationsWeb.ErrorHTML, "404", "html", []) == "Not Found"
+    assert render_to_string(PrepairWeb.ErrorHTML, "404", "html", []) == "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(NotificationsWeb.ErrorHTML, "500", "html", []) == "Internal Server Error"
+    assert render_to_string(PrepairWeb.ErrorHTML, "500", "html", []) == "Internal Server Error"
   end
 end

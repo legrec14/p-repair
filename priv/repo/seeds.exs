@@ -5,7 +5,10 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Notifications.Repo.insert!(%Notifications.SomeSchema{})
+#     Prepair.Repo.insert!(%Prepair.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+for name <- ["Lave-linge (hublot)", "Lave-linge(top)", "Aspirateur"] do
+  {:ok, _} = Prepair.Data.create_category(%{name: name})
+end

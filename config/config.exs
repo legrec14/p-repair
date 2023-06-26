@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :notifications,
-  ecto_repos: [Notifications.Repo]
+config :prepair,
+  ecto_repos: [Prepair.Repo]
 
 # Configures the endpoint
-config :notifications, NotificationsWeb.Endpoint,
+config :prepair, PrepairWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: NotificationsWeb.ErrorHTML, json: NotificationsWeb.ErrorJSON],
+    formats: [html: PrepairWeb.ErrorHTML, json: PrepairWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Notifications.PubSub,
+  pubsub_server: Prepair.PubSub,
   live_view: [signing_salt: "gzCXc9i0"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :notifications, NotificationsWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :notifications, Notifications.Mailer, adapter: Swoosh.Adapters.Local
+config :prepair, Prepair.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

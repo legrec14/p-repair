@@ -1,0 +1,43 @@
+<.header>
+  Product <%= @product.id %>
+  <:subtitle>This is a product record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/products/#{@product}/edit"}>
+      <.button>Edit product</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @product.name %></:item>
+  <:item title="In service"><%= @product.in_service %></:item>
+  <:item title="Original"><%= @product.original %></:item>
+  <:item title="Manufacturer name"><%= @product.manufacturer_name %></:item>
+  <:item title="Category"><%= @product.category %></:item>
+  <:item title="Description"><%= @product.description %></:item>
+  <:item title="Reference"><%= @product.reference %></:item>
+  <:item title="Country of origin"><%= @product.country_of_origin %></:item>
+  <:item title="Bought new"><%= @product.bought_new %></:item>
+  <:item title="Date of purchase"><%= @product.date_of_purchase %></:item>
+  <:item title="Date of registration"><%= @product.date_of_registration %></:item>
+  <:item title="Start year"><%= @product.start_year %></:item>
+  <:item title="End year"><%= @product.end_year %></:item>
+  <:item title="Warranty duration"><%= @product.warranty_duration %></:item>
+  <:item title="Image"><%= @product.image %></:item>
+  <:item title="User manual"><%= @product.user_manual %></:item>
+  <:item title="Parts"><%= @product.parts %></:item>
+  <:item title="Serial number"><%= @product.serial_number %></:item>
+  <:item title="User"><%= @product.user %></:item>
+  <:item title="Profile"><%= @product.profile %></:item>
+  <:item title="Notifications"><%= @product.notifications %></:item>
+  <:item title="Views"><%= @product.views %></:item>
+
+  <:item title="Categories">
+    <%= for cat <- @product.categories do %>
+      <%= cat.title %>
+      <br/>
+    <% end %>
+  </:item>
+</.list>
+
+<.back navigate={~p"/products"}>Back to products</.back>

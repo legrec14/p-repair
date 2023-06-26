@@ -1,0 +1,31 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:name]} type="text" label="Name" />
+  <.input field={f[:in_service]} type="checkbox" label="In service" />
+  <.input field={f[:original]} type="checkbox" label="Original" />
+  <.input field={f[:manufacturer_name]} type="text" label="Manufacturer name" />
+  <.input field={f[:category]} type="text" label="Category" />
+  <.input field={f[:description]} type="text" label="Description" />
+  <.input field={f[:reference]} type="text" label="Reference" />
+  <.input field={f[:country_of_origin]} type="text" label="Country of origin" />
+  <.input field={f[:bought_new]} type="checkbox" label="Bought new" />
+  <.input field={f[:date_of_purchase]} type="date" label="Date of purchase" />
+  <.input field={f[:date_of_registration]} type="date" label="Date of registration" />
+  <.input field={f[:start_year]} type="date" label="Start year" />
+  <.input field={f[:end_year]} type="date" label="End year" />
+  <.input field={f[:warranty_duration]} type="number" label="Warranty duration" />
+  <.input field={f[:image]} type="text" label="Image" />
+  <.input field={f[:user_manual]} type="text" label="User manual" />
+  <.input field={f[:parts]} type="text" label="Parts" />
+  <.input field={f[:serial_number]} type="text" label="Serial number" />
+  <.input field={f[:user]} type="text" label="User" />
+  <.input field={f[:profile]} type="text" label="Profile" />
+  <.input field={f[:notifications]} type="text" label="Notifications" />
+  <.input field={f[:views]} type="number" label="Views" />
+
+  <:actions>
+    <.button>Save Product</.button>
+  </:actions>
+</.simple_form>
