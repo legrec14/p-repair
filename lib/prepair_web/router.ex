@@ -19,9 +19,8 @@ defmodule PrepairWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/contact", ContactController, :contact
-    get "/contact/:messenger", ContactController, :show
     resources "/products", ProductController
+    resources "/categories", CategoryController
   end
 
   # Other scopes may use custom stacks.
