@@ -8,6 +8,8 @@ defmodule PrepairWeb.Router do
     plug :put_root_layout, html: {PrepairWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    # Defines english as the default language,
+    # if no params are found by the call function.
     plug PrepairWeb.Plugs.Locale, "en"
   end
 
