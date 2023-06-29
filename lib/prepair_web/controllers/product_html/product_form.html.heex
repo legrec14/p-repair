@@ -2,6 +2,17 @@
   <.error :if={@changeset.action}>
     Oops, something went wrong! Please check the errors below.
   </.error>
+
+  <!-- Ajouter un tri par ordre alphabétique -->
+  <.input
+    field={f[:category_id]}
+    type="select"
+    multiple={false}
+    options={category_opts(@changeset)}
+    prompt = "Select a category"
+    label="Category"
+  />
+
   <.input field={f[:name]} type="text" label="Name" />
   <.input field={f[:in_service]} type="checkbox" label="In service" />
   <.input field={f[:original]} type="checkbox" label="Original" />
