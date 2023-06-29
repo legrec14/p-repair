@@ -5,6 +5,8 @@ defmodule Prepair.Data.Product do
   alias Prepair.Data.Category
 
   schema "products" do
+    many_to_many :categories, Category, join_through: "product_categories", on_replace: :delete
+
     field :bought_new, :boolean, default: false
     field :country_of_origin, :string
     field :date_of_purchase, :date
@@ -26,8 +28,6 @@ defmodule Prepair.Data.Product do
     field :user_manual, :string
     field :warranty_duration, :integer
     field :views, :integer
-
-    many_to_many :categories, Category, join_through: "product_categories", on_replace: :delete
 
     timestamps(type: :utc_datetime)
   end
