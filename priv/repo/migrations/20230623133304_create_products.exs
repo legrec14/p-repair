@@ -7,7 +7,6 @@ defmodule Prepair.Repo.Migrations.CreateProducts do
       add :in_service, :boolean, default: false, null: false
       add :original, :boolean, default: false, null: false
       add :manufacturer_name, :string
-      add :category, :string
       add :description, :string
       add :reference, :string, null: false
       add :country_of_origin, :string

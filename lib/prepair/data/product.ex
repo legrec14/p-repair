@@ -6,7 +6,6 @@ defmodule Prepair.Data.Product do
 
   schema "products" do
     field :bought_new, :boolean, default: false
-    field :category, :string
     field :country_of_origin, :string
     field :date_of_purchase, :date
     field :date_of_registration, :date
@@ -41,7 +40,6 @@ defmodule Prepair.Data.Product do
       :in_service,
       :original,
       :manufacturer_name,
-      :category,
       :description,
       :reference,
       :country_of_origin,
@@ -64,7 +62,6 @@ defmodule Prepair.Data.Product do
       :name,
       :original,
       :manufacturer_name,
-      :category,
       :reference,
       :bought_new,
       :date_of_purchase,
