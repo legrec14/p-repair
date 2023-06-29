@@ -7,7 +7,6 @@ defmodule Prepair.Data.Category do
     field :image, :string
     field :name, :string
     field :notifications, :string
-    field :product, :string
 
     timestamps()
   end
@@ -15,7 +14,7 @@ defmodule Prepair.Data.Category do
   @doc false
   def changeset(category, attrs) do
     category
-    |> cast(attrs, [:name, :image, :product, :average_lifetime, :notifications])
+    |> cast(attrs, [:name, :image, :average_lifetime, :notifications])
     |> validate_required(:name)
     |> unique_constraint(:name)
   end

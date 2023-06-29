@@ -5,7 +5,6 @@ defmodule Prepair.Repo.Migrations.CreateCategories do
     create table(:categories) do
       add :name, :string
       add :image, :string
-      add :product, :string
       add :average_lifetime, :integer
       add :notifications, :string
 
