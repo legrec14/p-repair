@@ -8,7 +8,7 @@ defmodule Prepair.Repo.Migrations.CreateCategories do
       add :average_lifetime, :integer
       add :notifications, :string
 
-      timestamps()
+      timestamps(type: :utc_datetime)
     end
 
     create unique_index(:categories, [:name])

@@ -8,7 +8,7 @@ defmodule Prepair.Data.Category do
     field :name, :string
     field :notifications, :string
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   @doc false
