@@ -9,6 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-for name <- ["Lave-linge (hublot)", "Lave-linge(top)", "Aspirateur"] do
-  {:ok, _} = Prepair.Data.create_category(%{name: name})
+categories = [{"Lave-linge (hublot)", 10}, {"Lave-linge (top)", 10}, {"Aspirateur", 8}]
+
+for {name, average_lifetime} <- categories do
+  {:ok, _} = Prepair.Data.create_category(%{name: name, average_lifetime: average_lifetime})
 end
